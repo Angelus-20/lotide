@@ -23,10 +23,28 @@ const assertEqual = function(actual, expected) {
       const element = list[middleIndex]
       return [element]
   }
+  
 };
+
 
 console.log(middle([1, 2, 3, 4, 5])) //=> ['3'] middle position - 2
 console.log(middle(['a', 'b', 'c', 'd'])) //=> ['b', 'c'] middle position - 1, 2
 console.log(middle([1, 2, 3])) //=> [2]
 console.log(middle([1])) //=> []
 console.log(middle([])) //=> []
+
+let planetMoons = {
+  mercury: 0,
+  venus: 0,
+  earth: 1,
+  mars: 2,
+  jupiter: 67,
+  saturn: 62,
+  uranus: 27,
+  neptune: 14
+};
+
+for (let planet in planetMoons) {
+  let numberOfMoons = planetMoons[planet];
+  console.log("Planet: " + planet + ", # of Moons: "+ numberOfMoons);
+}
