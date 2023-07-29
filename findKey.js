@@ -6,13 +6,9 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const findKey = function(obj, callBack) {
-  for (const key in object) {
-    const value = 
+// const findKey = function(obj, callBack) {
+//   for (const key in object) {
+//     const value = 
 
-    if (Object.hasOwnProperty.call(object, key)) {
-      const element = object[key];
-      
-    }
-  }
-}
+//   }
+// }
