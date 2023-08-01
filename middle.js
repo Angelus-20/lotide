@@ -1,10 +1,28 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
+const assertEqual = require(`./assertEqual`)
+
+// const assertEqual = function(actual, given) {
+//   const result = eqArrays(actual, given);
+//   if (result === true) {
+//     console.log(`✅ Assertion Passed: ${actual} === ${given}`);
+//   } else {
+//     console.log(`❌ Assertion Failed: ${actual} !== ${given}`);
+//   }
+// };
+
+const eqArrays = function(array1, array2) {
+  if (array1.length !== array2.length) {
+    return false; // check for length
   }
-};const middle = (list) => {
+  
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+      return false; // checks for values in that length
+    }
+  }
+  return true;  
+};
+
+const middle = (list) => {
   if (list.length < 3) {
       return []
   }
@@ -27,24 +45,10 @@ const assertEqual = function(actual, expected) {
 };
 
 
-console.log(middle([1, 2, 3, 4, 5])) //=> ['3'] middle position - 2
-console.log(middle(['a', 'b', 'c', 'd'])) //=> ['b', 'c'] middle position - 1, 2
-console.log(middle([1, 2, 3])) //=> [2]
-console.log(middle([1])) //=> []
-console.log(middle([])) //=> []
+// console.log(middle([1, 2, 3, 4, 5])) //=> ['3'] middle position - 2
+// console.log(middle(['a', 'b', 'c', 'd'])) //=> ['b', 'c'] middle position - 1, 2
+// console.log(middle([1, 2, 3])) //=> [2]
+// console.log(middle([1])) //=> []
+// console.log(middle([])) //=> []
 
-let planetMoons = {
-  mercury: 0,
-  venus: 0,
-  earth: 1,
-  mars: 2,
-  jupiter: 67,
-  saturn: 62,
-  uranus: 27,
-  neptune: 14
-};
-
-for (let planet in planetMoons) {
-  let numberOfMoons = planetMoons[planet];
-  console.log("Planet: " + planet + ", # of Moons: "+ numberOfMoons);
-}
+module.exports = middle;
