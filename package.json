@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@edwinp30/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "lotide",
   "main": "main.js",
   "directories": {
     "test": "test"
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/Angelus-20/lotide.git"
   },
-  "author": "",
+  "author": "@edwinp30",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Angelus-20/lotide/issues"
